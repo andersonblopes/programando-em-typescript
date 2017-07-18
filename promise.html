@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entenedendo promise</title>
+    </head>
+    <body>
+        <script>
+            const resposta = fetch('http://api.postmon.com.br/v1/cep/59621380');
+            resposta.then(data => data.json())
+                .then(data => {console.log(data)})
+                .catch(erro => { console.log('Houve erro ao buscar cep: '+ erro)});
+        </script>
+    </body>
+</html>
